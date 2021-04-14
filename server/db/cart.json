@@ -1,0 +1,25 @@
+{
+  "contents": [
+    {
+      "id": 1,
+      "name": "Копченая паприка Santa Maria",
+      "price": 449,
+      "amount": 32,
+      "img": "./assets/img/photo_item_1.png"
+    },
+    {
+      "id": 2,
+      "name": "Конфеты «Фруже», абрикос с миндалём в белом шоколаде",
+      "price": 149,
+      "amount": 1,
+      "img": "./assets/img/photo_item_2.png"
+    },
+    {
+      "id": 3,
+      "name": "Печенье бисквитное Casa Dolcini Lady Fingers",
+      "price": 213,
+      "amount": 2,
+      "img": "./assets/img/photo_item_3.png"
+    }
+  ]
+}
