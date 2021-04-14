@@ -1,8 +1,7 @@
-@import "~bootstrap/scss/bootstrap"
+@import "~bootstrap-4-grid/scss/grid"
 @import "reset"
 @import "vars"
 @import "extends"
-@import "mixins"
 
 
 html, body
@@ -103,7 +102,11 @@ label
 .nav__item:active
   color: #606060
 
-.catalog__h1
+.catalog__block
+  display: flex
+  justify-content: center
+
+.catalog__h2
   font-family: Roboto
   font-style: normal
   font-weight: normal
@@ -111,16 +114,27 @@ label
   line-height: 35px
   text-align: center
   color: #000000
-  text-transform: uppercase
   margin-bottom: 20px
 
 .catalog__hr
   border: 1px solid #C4C4C4
   margin: auto
-  width: 326px
+  width: 355px
 
 .catalog__filter
   margin: auto
+
+.catalog__filter_lg
+  display: none
+  padding-bottom: 20px
+  background: #ECECEC
+  margin-top: 18px
+  border-radius: 5px
+  height: max-content
+
+.filter__drop_lg
+  margin-left: auto
+  margin-right: auto
 
 .filter
   margin-top: 18px
@@ -130,6 +144,7 @@ label
   border-radius: 5px
 
 .filter__summary
+  position: relative
   display: flex
   justify-content: space-between
   line-height: 50px
@@ -138,20 +153,31 @@ label
   font-weight: normal
   font-size: 16px
   color: #606060
-  margin: 0 15px
+  padding-left: 10px
+  //margin: 0 15px
 
 .filter__summary:before
-  content: "Фильтры"
+  position: absolute
+  right: 32px
+  content: "Развернуть"
+  font-family: Roboto
+  font-style: normal
+  font-weight: normal
+  font-size: 13px
 
 .filter__summary:after
-  content: "Развернуть \f078"
+  content: "\f078"
   font-family: FontAwesome
   color: #606060
   font-size: 13px
+  padding-right: 13px
 
 .filter[open] .filter__summary:after
-  content: "Свернуть \f077"
+  content: "\f077"
   font-family: FontAwesome
+
+.filter[open] .filter__summary:before
+  content: "Свернуть"
 
 .filter__drop
   background: #ECECEC
@@ -205,6 +231,7 @@ label
 .filter__hr
   margin-top: 22px
   width: 326px
+  border: 0.5px solid #C4C4C4
 
 .slider
   -webkit-appearance: none
@@ -249,7 +276,7 @@ label
   cursor: pointer
   pointer-events: all
   position: relative
-  z-index: 10
+  z-index: 100
   -moz-appearance: none
 
 .slider input::-moz-range-track
@@ -302,39 +329,48 @@ label
     line-height: 24px
     color: #606060
     margin: 0
-    padding-left: 8px
+    padding-left: 3px
 
-.filter__drop__checkbox
+.filter__drop__label>input
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+.filter__drop__label>span
   display: inline-flex
   align-items: center
   user-select: none
 
-.filter__drop__checkbox:before
-  background: #FFFFFF
+.filter__drop__label>span::before
+  margin-top: 2px
+  background: #ffffff
   border: 1px solid #00A54D
-  box-sizing: border-box
-  border-radius: 3px
   content: ''
   display: inline-block
-  width: 15px
-  height: 15px
+  width: 1em
+  height: 1em
   flex-shrink: 0
   flex-grow: 0
+  border-radius: 0.25em
   margin-right: 0.5em
   background-repeat: no-repeat
   background-position: center center
   background-size: 50% 50%
 
-.filter__drop__checkbox:checked:before
-  border-color: #00A54D
-  background-color: #00A54D
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+.filter__drop__label>input:checked+span::before
+  background-image: url("./assets/img/ok.png")
+
+.filter__drop__label>input:disabled+span::before
+  background-color: #ffffff
 
 .withdrawal
   margin-top: 20px
   display: flex
   justify-content: center
   margin-bottom: 25px
+
+.withdrawal__view
+  display: none
 
 .withdrawal__content
   display: flex
@@ -356,57 +392,103 @@ label
   label
     @extend %align-items
 
-.withdrawal__checkbox
+.withdrawal__block_2
+  padding: 0
+  display: flex
+  justify-content: flex-end
+
+.withdrawal__block_3
+  padding-right: 14px
+
+.withdrawal__label>input
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+.withdrawal__label>span
   display: inline-flex
   align-items: center
   user-select: none
 
-.withdrawal__checkbox:before
+.withdrawal__label>span::before
+  margin-top: 2px
   background: #ffffff
-  border: 1px solid #606060
-  box-sizing: border-box
-  border-radius: 3px
+  border: 0.5px solid #606060
   content: ''
   display: inline-block
-  width: 15px
-  height: 15px
+  width: 1em
+  height: 1em
   flex-shrink: 0
   flex-grow: 0
+  border-radius: 0.25em
   margin-right: 0.5em
   background-repeat: no-repeat
   background-position: center center
   background-size: 50% 50%
 
-.withdrawal__checkbox:checked:before
-  border-color: #606060
-  background-color: #606060
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+.withdrawal__label>input:checked+span::before
+  background-image: url("./assets/img/ok.png")
+
+.withdrawal__label>input:disabled+span::before
+  background-color: #ffffff
 
 .withdrawal__box
-  background: #ECECEC
+  position: relative
+  width: 50px
   height: 33px
-  border-radius: 3px
-  padding-left: 5px
-  padding-right: 5px
+  //background: #ECECEC
+  //color: #00A54D
+  //font-family: Roboto
+  //font-style: normal
+  //font-weight: normal
+  //font-size: 12px
+  //line-height: 14px
+  //text-align: center
+  //width: 50px
+  //height: 33px
+  //border-radius: 3px
+  //padding-left: 10px
+  //padding-right: 5px
+  //display: flex
+
+.withdrawal__box:after
+  display: inline-block
+  z-index: 2
+  position: absolute
+  right: 13px
+  top: 6px
+  //width: 7px
+  //height: 3px
+  text-align: center
+  content: url("./assets/img/down.png")
 
 .withdrawal__select
-  padding-left: 3px
+  display: block
   background: #ECECEC
-  color: #00A54D
-  width: 40px
-  height: 33px
-  font-family: Roboto
-  font-style: normal
-  font-weight: normal
+  appearance: none
+  border: none
+  outline: none
+  border-radius: 3px
+  padding: 11px
+  //padding-left: 10px
+  //padding-right: 5px
+  margin: 0
+  width: 100%
+  font-family: inherit
   font-size: 12px
-  line-height: 14px
-  text-align: center
+  cursor: inherit
+  line-height: inherit
+  color: #00A54D
+  option
+    outline: none
+    border: none
 
 .withdrawal__select_sort
   width: 128px
 
 .products
   margin-bottom: 35px
+  width: 330px
 
 .products__item
   margin-top: 22px
@@ -443,6 +525,22 @@ label
   align-items: center
   color: #00A54D
 
+.item__box
+  display: flex
+
+.item__sale
+  margin-top: 25px
+  font-family: Open Sans
+  font-style: normal
+  font-weight: 600
+  font-size: 18px
+  line-height: 25px
+  display: flex
+  align-items: center
+  color: #696969
+  margin-right: 10px
+  text-decoration: line-through
+
 .item__interaction
   margin-top: 15px
   width: 296px
@@ -463,6 +561,13 @@ label
   text-align: center
   text-transform: uppercase
   color: #FFFFFF
+  transition: background-color 0.5s
+
+.item__button:hover
+  background: #0C8343
+
+.item__button:focus
+  background: #0C8343
 
 .item__count
   display: inline-block
@@ -507,6 +612,10 @@ label
   font-weight: 600
   background: transparent
   color: #00A54D
+  transition: color 0.5s
+
+.item__down:focus
+  color: #0C8343
 
 .item__up
   position: absolute
@@ -522,6 +631,10 @@ label
   font-weight: 600
   background: transparent
   color: #00A54D
+  transition: color 0.5s
+
+.item__up:focus
+  color: #0C8343
 
 .pagination
   display: flex
@@ -591,15 +704,36 @@ label
     font-size: 36px
     line-height: 42px
 
+  .withdrawal__block_3
+    padding-right: 14px
+    display: flex
+    justify-content: flex-end
+
   .pagination__content
     width: 492px
 
 @media screen and (min-width: 1600px)
+  .wrapper
+    background: #F4F4F4
+
+  .catalog
+    width: 1600px
+    background: #ffffff
+    margin: auto
+
   .size
     width: 1440px
 
   .find
     height: 80px
+    position: relative
+
+  .find__content
+    position: absolute
+    width: 100vw
+    background: #ECECEC
+    display: flex
+    justify-content: center
 
   .find__right
     width: 1440px
@@ -634,13 +768,9 @@ label
   .nav__item
     margin-right: 17px
 
-  .catalog__block
-    width: 1440px
-    display: flex
-    justify-content: center
-
-  .catalog__h1
-    text-align: start
+  .catalog__h2
+    display: block
+    text-align: left
 
   .catalog__content
     display: flex
@@ -652,24 +782,61 @@ label
     justify-content: space-between
 
   .catalog__filter
+    display: none
     margin: 0
     width: 345px
+
+  .catalog__filter_lg
+    width: 345px
+    display: flex
 
   .filter
     display: flex
     justify-content: flex-start
     width: 345px
 
+  .filter__drop_below
+    width: 320px
+
+  .filter__hr
+    width: 320px
+    margin-top: 18px
+
+  .filter__range__hr
+    width: 160px
+
+  .slider
+    width: 320px
+
   .catalog__box
+    width: 1050px
+
+  .withdrawal__content
+    width: 1050px
+
+  .withdrawal__view
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    i
+      padding: 8px
+      color: #C4C4C4
+      transition: color 0.5s, background 0.5s
+    i:hover
+      color: #00A54D
+      background: #ECECEC
+
+  .withdrawal__block_2
+    display: flex
+    justify-content: flex-end
+    padding-right: 23px
+
+  .hr__xl
     width: 1050px
 
   .products
     width: 1050px
 
-  .col-xl-4
-    -ms-flex: 0 0 33.333333%
-    flex: 0 0 33.333333%
-    max-width: 33.333333%
-
-
+  .pagination
+    width: 1050px
 
