@@ -670,6 +670,35 @@ label
   border-radius: 50%
   border: 2px solid #00A54D
 
+.menu
+  display: flex
+  justify-content: center
+  margin: 20px 0
+  li
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    justify-content: flex-start
+    margin-left: 10px
+    list-style-type: disc
+    background-image: url("./assets/img/folder.png")
+    background-repeat: no-repeat
+    background-position-y: 10px
+    background-size: 20px
+    padding: 10px 0 0 30px
+
+.menu__close
+  display: none
+
+.menu__arrow
+  position: relative
+
+.menu__arrow:before
+  content: "\f078"
+  font-family: FontAwesome
+  position: absolute
+  left: -24px
+
 @media screen and (min-width: 768px)
   .size
     width: 688px
