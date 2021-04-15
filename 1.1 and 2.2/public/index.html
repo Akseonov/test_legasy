@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Главная страница</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<body>
+<div class="wrapper">
+  <div id="message" class="message message__no"><p id="message__p"></p><button id="message__button">ok</button></div>
+  <div class="catalog">
+    <div class="find">
+      <div class="find__content">
+        <div class="find__right">
+          <div class="find__container size">
+            <div class="find__icon">
+              <img src="./assets/img/find.png" alt="find">
+            </div>
+            <label>
+              <input type="text" class="find__input" placeholder="Что вы хотете найти?">
+            </label>
+            <div class="find__button">Найти</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="nav__container">
+        <a href="#" class="nav__item">
+          Главная
+        </a>
+        <a href="#" class="nav__item">
+          Продукты
+        </a>
+        <a href="#" class="nav__item">
+          Новинки
+        </a>
+      </div>
+    </div>
+    <div class="catalog__block">
+      <h2 class="catalog__h2 size">Новинки продуктов</h2>
+    </div>
+    <hr class="catalog__hr size">
+    <div class="catalog__content">
+      <div class="catalog__container">
+        <div class="catalog__filter">
+          <details class="filter size">
+            <summary class="filter__summary">Фильтры</summary>
+            <div class="filter__drop">
+              <details class="filter__drop_below" open>
+                <summary class="filter__summary_below">Цена</summary>
+                <div class="filter__drop_below">
+                  <label>
+                    <input type="range" min="40" max="6000" value="40" class="slider" id="lower">
+                    <input type="range" min="12" max="6000" value="1586" class="slider" id="higher">
+                  </label>
+                  <div class="filter__range">
+                    <p class="filter__range__price">40</p>
+                    <hr class="filter__range__hr">
+                    <p class="filter__range__price">1564</p>
+                  </div>
+
+                </div>
+              </details>
+              <hr class="catalog__hr filter__hr">
+              <details class="filter__drop_below" open>
+                <summary class="filter__summary_below">Бренд</summary>
+                <div class="filter__drop_below">
+                  <div class="filter__drop__row">
+                    <label class="filter__drop__label">
+                      <input type="checkbox">
+                      <span></span>
+                    </label>
+                    <p>Alpen Gold (<span>2</span>)</p>
+                  </div>
+                  <div class="filter__drop__row">
+                    <label class="filter__drop__label">
+                      <input type="checkbox">
+                      <span></span>
+                    </label>
+                    <p>Casa Dolcini (<span>1</span>)</p>
+                  </div>
+                  <div class="filter__drop__row">
+                    <label class="filter__drop__label">
+                      <input type="checkbox">
+                      <span></span>
+                    </label>
+                    <p>Santa Maria (<span>2</span>)</p>
+                  </div>
+                </div>
+              </details>
+              <hr class="catalog__hr filter__hr">
+              <details class="filter__drop_below" open>
+                <summary class="filter__summary_below">Особенность</summary>
+                <div class="filter__drop_below">
+                  <div class="filter__drop__row">
+                    <label class="filter__drop__label">
+                      <input type="checkbox">
+                      <span></span>
+                    </label>
+                    <p>С арахисом</p>
+                  </div>
+                  <div class="filter__drop__row">
+                    <label class="filter__drop__label">
+                      <input type="checkbox">
+                      <span></span>
+                    </label>
+                    <p>Без сахара</p>
+                  </div>
+                </div>
+              </details>
+              <hr class="catalog__hr filter__hr">
+            </div>
+          </details>
+        </div>
+        <div class="catalog__filter_lg">
+          <div class="filter__drop_lg">
+            <details class="filter__drop_below">
+              <summary class="filter__summary_below">Цена</summary>
+              <div class="filter__drop_below">
+                <label>
+                  <input type="range" min="40" max="6000" value="40" class="slider" id="lowerLg">
+                  <input type="range" min="12" max="6000" value="1586" class="slider" id="higherLg">
+                </label>
+                <div class="filter__range">
+                  <p class="filter__range__price">40</p>
+                  <hr class="filter__range__hr">
+                  <p class="filter__range__price">1564</p>
+                </div>
+
+              </div>
+            </details>
+            <hr class="catalog__hr filter__hr">
+            <details class="filter__drop_below">
+              <summary class="filter__summary_below">Бренд</summary>
+              <div class="filter__drop_below">
+                <div class="filter__drop__row">
+                  <label class="filter__drop__label">
+                    <input type="checkbox">
+                    <span></span>
+                  </label>
+                  <p>Alpen Gold (<span>2</span>)</p>
+                </div>
+                <div class="filter__drop__row">
+                  <label class="filter__drop__label">
+                    <input type="checkbox">
+                    <span></span>
+                  </label>
+                  <p>Casa Dolcini (<span>1</span>)</p>
+                </div>
+                <div class="filter__drop__row">
+                  <label class="filter__drop__label">
+                    <input type="checkbox">
+                    <span></span>
+                  </label>
+                  <p>Santa Maria (<span>2</span>)</p>
+                </div>
+              </div>
+            </details>
+            <hr class="catalog__hr filter__hr">
+            <details class="filter__drop_below">
+              <summary class="filter__summary_below">Особенность</summary>
+              <div class="filter__drop_below">
+                <div class="filter__drop__row">
+                  <label class="filter__drop__label">
+                    <input type="checkbox">
+                    <span></span>
+                  </label>
+                  <p>С арахисом</p>
+                </div>
+                <div class="filter__drop__row">
+                  <label class="filter__drop__label">
+                    <input type="checkbox">
+                    <span></span>
+                  </label>
+                  <p>Без сахара</p>
+                </div>
+              </div>
+            </details>
+            <hr class="catalog__hr filter__hr">
+          </div>
+        </div>
+        <div class="catalog__box">
+          <div class="withdrawal">
+            <div class="withdrawal__content row size">
+              <div class="withdrawal__view col-xl-1 pl-0">
+                <i class="fas fa-th"></i>
+                <i class="fas fa-list"></i>
+              </div>
+              <div class="withdrawal__block withdrawal__block_1 col-5 col-md-3 col-xl-5 p-0">
+                <p>Цена со скидкой</p>
+                <label class="withdrawal__label">
+                  <input type="checkbox">
+                  <span></span>
+                </label>
+              </div>
+              <div class="withdrawal__block withdrawal__block_2 col-7 col-md-4 col-xl-3">
+                <p>Товаров на странице</p>
+                <label>
+                  <div class="withdrawal__box">
+                    <select class="withdrawal__select">
+                      <option value="0">6</option>
+                      <option value="0">12</option>
+                      <option value="0">24</option>
+                    </select>
+                  </div>
+                </label>
+              </div>
+              <div class="withdrawal__block withdrawal__block_3 col-9 col-md-5 p-0 col-xl-3">
+                <p>Сортировать по</p>
+                <label>
+                  <div class="withdrawal__box withdrawal__select_sort">
+                    <select class="withdrawal__select">
+                      <option value="0">Популярности</option>
+                      <option value="0">Цене</option>
+                    </select>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <hr class="catalog__hr size hr__xl">
+          <div class="products container size p-0">
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-6 col-xl-4">
+                <div class="products__item col-12">
+                  <a href="#">
+                    <img src="./assets/img/photo_item_1.png" alt="photo_item_1" class="item__img">
+                  </a>
+                  <a href="#">
+                    <h2 class="item__name">Копченая паприка Santa Maria, 230г</h2>
+                  </a>
+                  <div class="item__box">
+                    <h3 class="item__sale">643 р.</h3>
+                    <h4 class="item__price">449 р.</h4>
+                  </div>
+                  <div class="item__interaction">
+                    <div class="item__count">
+                      <button class="item__down">-</button>
+                      <label>
+                        <input type="number" value="1" class="item__input" id="1">
+                      </label>
+                      <button class="item__up">+</button>
+                    </div>
+                    <button class="item__button"
+                            data-price="449"
+                            data-id="1"
+                            data-name="Копченая паприка Santa Maria"
+                            data-img="./assets/img/photo_item_1.png"
+                    >В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4">
+                <div class="products__item col-12">
+                  <a href="#">
+                    <img src="./assets/img/photo_item_2.png" alt="photo_item_1" class="item__img">
+                  </a>
+                  <a href="#">
+                    <h2 class="item__name">Конфеты «Фруже», абрикос с миндалём в белом шоколаде, 220г</h2>
+                  </a>
+                  <div class="item__box">
+                    <!--                      <h3 class="item__sale">643 р.</h3>-->
+                    <h4 class="item__price">149 р.</h4>
+                  </div>
+                  <div class="item__interaction">
+                    <div class="item__count">
+                      <button class="item__down">-</button>
+                      <label>
+                        <input type="number" value="1" class="item__input">
+                      </label>
+                      <button class="item__up">+</button>
+                    </div>
+                    <button class="item__button"
+                            data-price="149"
+                            data-id="2"
+                            data-name="Конфеты «Фруже», абрикос с миндалём в белом шоколаде"
+                            data-img="./assets/img/photo_item_2.png"
+                    >В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4">
+                <div class="products__item col-12">
+                  <a href="#">
+                    <img src="./assets/img/photo_item_3.png" alt="photo_item_1" class="item__img">
+                  </a>
+                  <a href="#">
+                    <h2 class="item__name">Печенье бисквитное Casa Dolcini Lady Fingers, 200г</h2>
+                  </a>
+                  <div class="item__box">
+                    <!--                      <h3 class="item__sale">643 р.</h3>-->
+                    <h4 class="item__price">213 р.</h4>
+                  </div>
+                  <div class="item__interaction">
+                    <div class="item__count">
+                      <button class="item__down">-</button>
+                      <label>
+                        <input type="number" value="1" class="item__input">
+                      </label>
+                      <button class="item__up">+</button>
+                    </div>
+                    <button class="item__button"
+                            data-price="213"
+                            data-id="3"
+                            data-name="Печенье бисквитное Casa Dolcini Lady Fingers"
+                            data-img="./assets/img/photo_item_3.png"
+                    >В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4">
+                <div class="products__item col-12">
+                  <a href="#">
+                    <img src="./assets/img/photo_item_4.png" alt="photo_item_1" class="item__img">
+                  </a>
+                  <a href="#">
+                    <h2 class="item__name">Шоколад молочный Alpen Gold Max Fun, 160г</h2>
+                  </a>
+                  <div class="item__box">
+                    <h3 class="item__sale">147 р.</h3>
+                    <h4 class="item__price">120 р.</h4>
+                  </div>
+                  <div class="item__interaction">
+                    <div class="item__count">
+                      <button class="item__down">-</button>
+                      <label>
+                        <input type="number" value="1" class="item__input">
+                      </label>
+                      <button class="item__up">+</button>
+                    </div>
+                    <button class="item__button"
+                            data-price="120"
+                            data-id="4"
+                            data-name="Шоколад молочный Alpen Gold Max Fun"
+                            data-img="./assets/img/photo_item_4.png"
+                    >В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4">
+                <div class="products__item col-12">
+                  <a href="#">
+                    <img src="./assets/img/photo_item_5.png" alt="photo_item_1" class="item__img">
+                  </a>
+                  <a href="#">
+                    <h2 class="item__name">Шоколад молочный Alpen Gold Max Fun, 160г</h2>
+                  </a>
+                  <div class="item__box">
+                    <!--                      <h3 class="item__sale">147 р.</h3>-->
+                    <h4 class="item__price">147 р.</h4>
+                  </div>
+                  <div class="item__interaction">
+                    <div class="item__count">
+                      <button class="item__down">-</button>
+                      <label>
+                        <input type="number" value="1" class="item__input">
+                      </label>
+                      <button class="item__up">+</button>
+                    </div>
+                    <button class="item__button"
+                            data-price="147"
+                            data-id="5"
+                            data-name="Шоколад молочный Alpen Gold Max Fun"
+                            data-img="./assets/img/photo_item_5.png"
+                    >В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4">
+                <div class="products__item col-12">
+                  <a href="#">
+                    <img src="./assets/img/photo_item_6.png" alt="photo_item_1" class="item__img">
+                  </a>
+                  <a href="#">
+                    <h2 class="item__name">Прованские травы Santa Maria, 6г</h2>
+                  </a>
+                  <div class="item__box">
+                    <!--                      <h3 class="item__sale">147 р.</h3>-->
+                    <h4 class="item__price">39 р.</h4>
+                  </div>
+                  <div class="item__interaction">
+                    <div class="item__count">
+                      <button class="item__down">-</button>
+                      <label>
+                        <input type="number" value="1" class="item__input">
+                      </label>
+                      <button class="item__up">+</button>
+                    </div>
+                    <button class="item__button"
+                            data-price="39"
+                            data-id="6"
+                            data-name="Прованские травы Santa Maria"
+                            data-img="./assets/img/photo_item_6.png"
+                    >В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="catalog__hr size  hr__xl">
+          <div class="pagination container p-0 size">
+            <div class="pagination__content">
+              <a href="#/"><i class="fal fa-long-arrow-left"></i></a>
+              <a href="#/" class="pagination__content_active">1</a>
+              <a href="#/">2</a>
+              <a href="#/">3</a>
+              <a href="#/">...</a>
+              <a href="#/">60</a>
+              <a href="#/"><i class="fal fa-long-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
