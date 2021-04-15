@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Копченая паприка Santa Maria, 230г",
+    "price": 449,
+    "sale": 643,
+    "img": "./assets/img/photo_item_1.png"
+  },
+  {
+    "id": 2,
+    "name": "Конфеты «Фруже», абрикос с миндалём в белом шоколаде, 220г",
+    "price": 149,
+    "sale": 149,
+    "img": "./assets/img/photo_item_2.png"
+  },
+  {
+    "id": 3,
+    "name": "Печенье бисквитное Casa Dolcini Lady Fingers, 200г",
+    "price": 213,
+    "sale": 213,
+    "img": "./assets/img/photo_item_3.png"
+  },
+  {
+    "id": 4,
+    "name": "Шоколад молочный Alpen Gold Max Fun, 160г",
+    "price": 147,
+    "sale": 120,
+    "img": "./assets/img/photo_item_4.png"
+  },
+  {
+    "id": 5,
+    "name": "Шоколад молочный Alpen Gold Max Fun, 160г",
+    "price": 147,
+    "sale": 147,
+    "img": "./assets/img/photo_item_5.png"
+  },
+  {
+    "id": 6,
+    "name": "Прованские травы Santa Maria, 6г",
+    "price": 39,
+    "sale": 39,
+    "img": "./assets/img/photo_item_6.png"
+  }
+]

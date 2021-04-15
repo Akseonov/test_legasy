@@ -13,6 +13,7 @@ module.exports = merge(common, {
       {
         test: /(\.css|\.sass)$/i,
         use: [
+          "vue-style-loader",
           {
             loader: MiniCssExtractPlugin.loader,
           },
@@ -42,6 +43,9 @@ module.exports = merge(common, {
             loader: "sass-loader",
             options: {
               sourceMap: false,
+              sassOptions: {
+                indentedSyntax: true
+              },
             }
           },
         ],

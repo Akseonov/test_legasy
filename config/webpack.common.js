@@ -1,8 +1,8 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const CopyPlugin = require("copy-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   entry:  {
@@ -16,7 +16,14 @@ module.exports = {
 
   module: {
     rules: [
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.vue$/i,
+        loader: 'vue-loader',
+      },
     ],
   },
 
@@ -46,10 +53,7 @@ module.exports = {
         template: './public/index.html',
       }
     ),
-  ],
 
-  // devServer: {  // configuration for webpack-dev-server
-  //   contentBase: './src/public',  //source of static assets
-  //   port: 9000, // port to run dev-server
-  // }
+    new VueLoaderPlugin(),
+  ],
 };

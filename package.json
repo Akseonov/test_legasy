@@ -23,16 +23,20 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.3",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^5.10.2",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "bootstrap": "^4.5.3",
-    "postcss-loader": "^4.1.0"
+    "postcss-loader": "^4.1.0",
+    "vue": "^2.6.12"
   },
   "nodemonConfig": {
-    "ignore": ["*.json"]
+    "ignore": [
+      "*.json"
+    ]
   }
 }
